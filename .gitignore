@@ -1,0 +1,18 @@
+# Auto generated files
+HELP.md
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+
+# Java Build files
+bin/
+build/
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+.history/
+
+# H2 temp file
+*.mv.db
