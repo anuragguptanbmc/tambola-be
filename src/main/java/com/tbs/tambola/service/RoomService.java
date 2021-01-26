@@ -1,12 +1,13 @@
 package com.tbs.tambola.service;
 
 import com.tbs.tambola.exception.RoomNotFoundException;
-import com.tbs.tambola.model.Room;
+import com.tbs.tambola.model.db.Room;
+import com.tbs.tambola.model.rest.RoomRequest;
 import java.util.List;
 
 public interface RoomService {
 
-  public Room createRoom(Room room);
+  public Room createRoom(RoomRequest room);
 
   public Room updateRoom(Room room);
 

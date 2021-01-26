@@ -1,4 +1,4 @@
-package com.tbs.tambola.model;
+package com.tbs.tambola.model.rest;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

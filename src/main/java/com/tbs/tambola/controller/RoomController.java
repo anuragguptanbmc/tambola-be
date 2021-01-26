@@ -1,7 +1,8 @@
 package com.tbs.tambola.controller;
 
 import com.tbs.tambola.exception.RoomNotFoundException;
-import com.tbs.tambola.model.Room;
+import com.tbs.tambola.model.db.Room;
+import com.tbs.tambola.model.rest.RoomRequest;
 import com.tbs.tambola.service.RoomService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -39,8 +40,8 @@ public class RoomController {
    * @param roomConfig Room Config
    * @return The room created by the user
    */
-  public ResponseEntity<Room> createRoom(@RequestBody Room room) {
-    roomService.createRoom(room);
+  public ResponseEntity<Room> createRoom(@RequestBody RoomRequest request) {
+    Room room = roomService.createRoom(request);
     return new ResponseEntity<>(room, HttpStatus.OK);
   }
 

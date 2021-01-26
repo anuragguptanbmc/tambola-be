@@ -1,8 +1,9 @@
 package com.tbs.tambola.service;
 
 import com.tbs.tambola.exception.RoomNotFoundException;
-import com.tbs.tambola.model.Room;
 import com.tbs.tambola.model.RoomType;
+import com.tbs.tambola.model.db.Room;
+import com.tbs.tambola.model.rest.RoomRequest;
 import com.tbs.tambola.repository.PlayerRepository;
 import com.tbs.tambola.repository.RoomRepository;
 import com.tbs.tambola.utils.RoomIDGenerator;
@@ -20,7 +21,8 @@ public class RoomServiceImpl implements RoomService {
   private final PlayerRepository playerRepository;
 
   @Override
-  public Room createRoom(Room room) {
+  public Room createRoom(RoomRequest request) {
+    Room room = Room.fromRequest(request);
     room.setId(RoomIDGenerator.getRandom());
     Room createdRoom = roomRepository.save(room);
     log.info("Created room {}", room.getId());

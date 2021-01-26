@@ -1,5 +1,8 @@
-package com.tbs.tambola.model;
+package com.tbs.tambola.model.db;
 
+import com.tbs.tambola.model.RoomStatus;
+import com.tbs.tambola.model.RoomType;
+import com.tbs.tambola.model.rest.RoomRequest;
 import com.tbs.tambola.utils.RoomStatusConverter;
 import com.tbs.tambola.utils.RoomTypeConverter;
 import java.util.Date;
@@ -42,4 +45,10 @@ public class Room {
   @CreationTimestamp
   @Temporal(TemporalType.TIMESTAMP)
   private Date createdAt;
+
+  public static Room fromRequest(RoomRequest request) {
+    Room room = new Room();
+    room.setRoomType(request.getRoomType());
+    return room;
+  }
 }

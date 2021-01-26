@@ -1,6 +1,6 @@
 package com.tbs.tambola.repository;
 
-import com.tbs.tambola.model.Player;
+import com.tbs.tambola.model.db.Player;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

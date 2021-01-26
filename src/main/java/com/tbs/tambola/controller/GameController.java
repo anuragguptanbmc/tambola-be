@@ -1,6 +1,6 @@
 package com.tbs.tambola.controller;
 
-import com.tbs.tambola.model.WSMessage;
+import com.tbs.tambola.model.rest.WSMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.handler.annotation.DestinationVariable;

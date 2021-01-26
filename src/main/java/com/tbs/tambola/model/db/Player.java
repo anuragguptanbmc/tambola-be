@@ -1,4 +1,4 @@
-package com.tbs.tambola.model;
+package com.tbs.tambola.model.db;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
