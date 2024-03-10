@@ -1,0 +1,36 @@
+plugins {
+	id 'com.diffplug.spotless'
+	id 'java'
+}
+
+ext {
+    springBootVersion = '2.3.7.RELEASE'
+	swaggerVersion = '3.0.0'
+	lombokVersion = '1.18.16'
+	h2Version = '1.4.200'
+}
+
+spotless {
+	java {
+		importOrder() // standard import order
+    	removeUnusedImports()
+
+    	googleJavaFormat('1.9') 
+	}
+}
+
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {	
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+}

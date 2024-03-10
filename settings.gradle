@@ -1,1 +1,3 @@
 rootProject.name = 'tambola-be'
+include 'app'
+include 'lib'
